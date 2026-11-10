@@ -53,7 +53,7 @@ export default function Cards3() {
   border: 1px solid #55565a;
   border-radius: 10px;
   background: #010202;
-  color: #f4f4f5;
+  color: #f4f4f5;    
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 14px 30px -20px #000;
 }
@@ -77,16 +77,16 @@ export default function Cards3() {
           <svg
             className="sales-chart"
             viewBox="0 0 220 164"
-            role="img"
-            aria-label="Paarse hexagon-heatmap met groene accenten"
+            role="img" 
+            aria-label="Paarse hexagon-heatmap met groene accenten"   
           >
             {cells.map((cell, i) => (
               <polygon key={i} points={cell.points} fill={cell.fill} />
             ))}
           </svg>
-
+   
           <div className="sales-metrics">
-            <div>
+            <div>   
               <div className="sales-label">
                 <span className="sales-star" aria-hidden="true">
                   ✦

@@ -54,13 +54,13 @@ export default function Cards25() {
 .devui-card-25 .axis-label { fill:#cccfc8; font-size:10px; }
 .devui-card-25 .chart-value-label { fill:#d8eed1; font-size:9px; }
 @media(prefers-reduced-motion:reduce) { .devui-card-25 *, .devui-card-25 *::before, .devui-card-25 *::after { transition:none !important; animation:none !important; } }
-
+   
 .devui-card-25 .grouped-bar { filter:drop-shadow(0 0 1.1px currentColor); }`}</style>
-      <div className="devui-card-25">
+      <div className="devui-card-25">   
         <section className="chart-card" aria-label="Neon Grouped Bars">
           <header className="chart-heading">
             <p className="income-label">Income</p>
-            <div className="income-line">
+            <div className="income-line">   
               <h2 className="income-value">$32,134</h2>
               <span className="income-delta">+2.5%</span>
             </div>

@@ -13,4 +13,4 @@ export default function Cards42() {
       <span>Card 42</span>
     </div>
   );
-}
+}   
