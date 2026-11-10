@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/devui-banner.svg" alt="DevUI Code Library — Kleine componenten. Grote ideeën." width="100%" />
+  <img src="public/images/devui-banner.svg" alt="DevUI Code Library — Kleine componenten. Grote ideeën." width="100%" />
 </p>
 
 <h1 align="center">DevUI Code Library</h1>
@@ -28,7 +28,7 @@
 
 ## Een kijkje in DevUI
 
-[![DevUI-homepage met donkere interface, paarse accenten en componentcategorieën](docs/images/devui-homepage.png)](https://devui-two.vercel.app/)
+[![DevUI-homepage met donkere interface, paarse accenten en componentcategorieën](public/images/devui-homepage.png)](https://devui-two.vercel.app/)
 
 ## Wat zit erin?
 
@@ -43,14 +43,14 @@
 <details>
 <summary><strong>✦ Bekijk een selectie van de button-ontwerpen</strong></summary>
 
-![Gradient-, outline- en glow-buttons uit de DevUI-collectie](docs/images/devui-button-designs.png)
+![Gradient-, outline- en glow-buttons uit de DevUI-collectie](public/images/devui-button-designs.png)
 
 </details>
 
 <details>
 <summary><strong>✦ Bekijk een selectie van de card-ontwerpen</strong></summary>
 
-![DevUI-cards met gekleurde lichtaccenten, een muziekspeler en dashboard-elementen](docs/images/devui-card-designs.png)
+![DevUI-cards met gekleurde lichtaccenten, een muziekspeler en dashboard-elementen](public/images/devui-card-designs.png)
 
 </details>
 
@@ -133,7 +133,7 @@ DEVUI/
 │   ├── pages/              # Pagina's en bijbehorende stijlen
 │   ├── App.tsx             # Routes
 │   └── styles.css          # Tailwind-import en globale stijlen
-└── docs/images/            # Banner en afbeeldingen voor deze README
+└── public/images/            # Banner en afbeeldingen voor deze README
 ```
 
 ## Iconen
