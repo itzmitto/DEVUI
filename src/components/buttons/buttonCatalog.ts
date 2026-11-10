@@ -69,8 +69,6 @@ export const buttonCatalog: ButtonEntry[] = Object.entries(components)
   .sort((a, b) => a.number - b.number)
 
 // De voorbeelden zijn React-componenten, de code is altijd de echte TSX-file.
-export const buttonCategories = ['Alle buttons', ...new Set(buttonCatalog.map(item => item.category))]
-
 export function nextButtonNumber(): number {
   return Math.max(0, ...buttonCatalog.map(item => item.number)) + 1
 }
@@ -88,11 +86,9 @@ export const buttonMeta = {
 
 export default function Buttons${number}() {
   return (
-    <button
-      type="button"
-      className="rounded-xl bg-violet-600 px-6 py-3 font-semibold text-white transition hover:bg-violet-500"
-    >
-      Mijn button
+    <button type="button" className="btnlib-empty-button" disabled>
+      <span aria-hidden="true">+</span>
+      <span>Button ${number}</span>
     </button>
   )
 }
