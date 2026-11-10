@@ -64,7 +64,7 @@ export default function Topbar({ onOpenMobile }: Props) {
             <span className="new-dot" />
           </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/itzmitto/DEVUI"
             target="_blank"
             rel="noreferrer"
             className="github-link"
