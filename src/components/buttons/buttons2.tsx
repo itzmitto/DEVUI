@@ -32,7 +32,7 @@ export default function Buttons2({
         className={`outline-btn ${className}`.trim()}
       >
         {content}
-      </a>
+      </a>   
     );
   if (to)
     return (
