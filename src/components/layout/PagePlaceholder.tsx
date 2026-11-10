@@ -25,7 +25,7 @@ export default function PagePlaceholder({
       <h1>{title}</h1>
       <p className="placeholder-description">
         {description ||
-          `Dit is alvast jouw ${title}-pagina. Je kunt deze later zelf verder bouwen.`}
+          `De inlog pagina ${title}-pagina. Dit is voor voorbeeld ik ga geen echt inloggen formulier maken.`}
       </p>
       <div className="placeholder-note">
         <Icon name="ri-code-s-slash-line" />
