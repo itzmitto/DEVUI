@@ -15,7 +15,7 @@ export default function Buttons5() {
       className="
         group relative
         inline-flex min-h-[56px]
-        w-full max-w-[300px]
+        w-xs max-w-[300px]
         items-center justify-center
         rounded-xl px-6 py-3
         text-[16px] font-extrabold
