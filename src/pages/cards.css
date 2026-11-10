@@ -1,0 +1,24 @@
+/* De Cards-pagina gebruikt de bestaande Buttons-gallery-styling.
+   Alleen de card-preview krijgt meer hoogte. */
+.cards-page .btnlib-stage { height: 340px; min-height: 340px; }
+.cards-page .btnlib-stage-center { padding: 18px; }
+.cards-page .btnlib-stage-center > * { max-width: 100%; }
+.cards-empty {
+  display: flex;
+  width: min(100%, 260px);
+  height: 245px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px dashed #71538b;
+  border-radius: 14px;
+  background: rgba(100, 55, 135, .09);
+  color: #bda4d4;
+  font-size: 14px;
+  font-weight: 600;
+}
+.cards-empty span:first-child { font-size: 36px; color: #ba8be9; font-weight: 300; }
+@media (max-width: 690px) {
+  .cards-page .btnlib-stage { height: 330px; min-height: 330px; }
+}
