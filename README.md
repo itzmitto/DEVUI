@@ -1,6 +1,6 @@
 # DevUI Code Library
 
-React + TypeScript + Tailwind CSS v4 + Vite. De homepage is gebaseerd op de meegegeven screenshot, met zelf gegenereerde transparante ridder- en rotsillustraties.
+React + TypeScript + Tailwind CSS v4 + Vite. De homepage is gebaseerd op de meegegeven screenshot, met een uitsnede van de ridder uit je eigen referentiescreenshot en paarse rotsdecoratie.
 
 ## Starten
 
@@ -30,7 +30,7 @@ npm run build
 - `src/components/home/` bevat de hero, de code-preview, feature-strip en kaarten.
 - `src/data/navigation.ts` bevat alle menu-links en routes voor zoeken.
 - `src/styles.css` bevat Tailwind-import én de pixelgerichte stijlen.
-- `public/images/knight.png` en `purple-cliffs.png` zijn transparante, gegenereerde assets.
+- `public/images/knight-cutout.png` is de transparante ridder uit de referentie. `public/images/sidebar-rocks.png` is de uitgeknipte bergdecoratie en `rock-accent.png` de rechter rots.
 - `public/downloads/devui-starter-pack.zip` is de demo-download voor de starterpackknop.
 
 ## Iconen
@@ -45,7 +45,8 @@ Alle iconen: https://remixicon.com
 
 ## Belangrijk
 
-De pagina's behalve Home zijn opzettelijk eenvoudige placeholders, zodat je ze zelf kunt bouwen. De heroillustratie is een nieuwe, vergelijkbare afbeelding en geen identieke kopie van het bronpersonage. De CDN-iconen en Google Fonts laden via internet.
+De pagina's behalve Home zijn opzettelijk eenvoudige placeholders, zodat je ze zelf kunt bouwen. De ridder gebruikt beeldmateriaal uit de door jou aangeleverde referentiescreenshot. De rest van de website is in HTML/CSS/React nagebouwd en blijft een benadering. De CDN-iconen en Google Fonts laden via internet.
+
 
 ## Aanpassing van de homepage (10 november 2026)
 
@@ -55,3 +56,13 @@ De pagina's behalve Home zijn opzettelijk eenvoudige placeholders, zodat je ze z
 - Op brede schermen heeft de content een maximale breedte van 1440px voor evenwichtige verhoudingen.
 
 **Belangrijk bij screenshots vergelijken:** de aangeleverde doelafbeelding is 1672 × 941 pixels. Een opname van 1852 × 1180 pixels toont door de andere resolutie en eventuele browserzoom een andere hoeveelheid lege ruimte. Vergelijk bij voorkeur beide op 100% zoom en hetzelfde browserformaat.
+
+## CSS-fix: header, ridder en componenten (10 november 2026)
+
+- `src/styles.css` is opgeschoond: eerdere overlappende `v2/v3`-regels zijn verwijderd.
+- De bovenkant van de ridder wordt **niet meer verborgen door de topbar**: `page-content` staat boven de headerlaag.
+- De zwevende codekaart staat vóór de schouder; de drie feature-balken staan vóór het harnas.
+- De hero, zoekbalk, componenten-grid en Starter Pack-kaart zijn bij een 1672 × 941 viewport uitgelijnd op de referentie.
+- `public/images/sidebar-rocks.png` gebruikt een zachte alpha-maskering, zodat de berg achter het menu valt.
+
+**Met je bestaande GitHub-repo gebruiken:** bewaar eerst eventuele niet-gecommitte wijzigingen. Pak het ZIP-bestand in de bestaande projectmap uit (het ZIP bevat geen `.git`-map), voer `npm install` uit en start met `npm run dev`. Vergelijk screenshots op browserzoom **100%** (`Ctrl + 0`).
