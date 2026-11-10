@@ -1,19 +1,43 @@
-// DevUI button 05 - jouw eigen button
-// Alleen dit bestand aanpassen. De Buttons-pagina ontdekt je code automatisch.
+
+ // DevUI Button 05 - GTA Vice City Gradient
 
 export const buttonMeta = {
-  title: 'Button 05',
-  category: 'Nog invullen',
-  description: 'Lege plek. Open buttons5.tsx en bouw hier jouw eigen button.',
-  tags: ['Eigen ontwerp'],
+  title: 'GTA Vice City Gradient',
+  category: 'Gradient',
+  description: 'GTA-stijl gradient met roze, paars en oranje.',
+  tags: ['GTA', 'Gradient', 'Vice City'],
 }
 
 export default function Buttons5() {
   return (
-    // TODO: vervang deze lege voorbeeldbutton door je eigen JSX / Tailwind CSS.
-    <button type="button" className="btnlib-empty-button" disabled>
-      <span aria-hidden="true">+</span>
-      <span>Button 05</span>
+    <button
+      type="button"
+      className="
+        group relative
+        inline-flex min-h-[56px]
+        w-full max-w-[300px]
+        items-center justify-center
+        rounded-xl px-6 py-3
+        text-[16px] font-extrabold
+        uppercase tracking-[1.5px]
+        text-white
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:brightness-110
+        active:translate-y-0
+        active:scale-95
+        focus-visible:outline-2
+        focus-visible:outline-offset-4
+        focus-visible:outline-pink-400
+      "
+      style={{
+        background:
+          'linear-gradient(110deg, #FF3D9A 0%, #B34DDF 48%, #FF914D 100%)',
+        boxShadow:
+          '0 6px 22px rgba(255, 61, 154, 0.3)',
+      }}
+    >
+      START GAME
     </button>
   )
 }
