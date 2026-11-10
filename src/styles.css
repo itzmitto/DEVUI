@@ -1983,3 +1983,315 @@ input:focus-visible {
     gap: 26px;
   }
 }
+
+/* Ultrawide displays (2400 CSS px and wider)
+   Preserve the 1672 px reference layout; enlarge UI elements rather than
+   stretching four small mockups across a huge desktop. No global zoom/scale. */
+@media (min-width: 2400px) {
+  :root {
+    --sidebar-width: clamp(290px, 10vw, 340px);
+  }
+  .is-collapsed {
+    --sidebar-width: 92px;
+  }
+  .sidebar-brand-row {
+    height: 96px;
+    padding-inline: 32px 22px;
+  }
+  .brand-mark {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+  }
+  .brand-text strong {
+    font-size: 29px;
+  }
+  .brand-text small {
+    font-size: 13px;
+  }
+  .sidebar-scroll {
+    height: calc(100vh - 96px);
+    padding: 24px 23px 190px;
+  }
+  .side-link {
+    height: 49px;
+    font-size: 16px;
+    gap: 22px;
+    padding-inline: 23px;
+  }
+  .side-link > i {
+    font-size: 21px;
+    width: 25px;
+  }
+  .category-menu .side-link {
+    height: 39px;
+    font-size: 15.5px;
+  }
+  .category-menu .side-link > i {
+    font-size: 19px;
+  }
+  .category-label {
+    font-size: 17px;
+    margin-top: 9px;
+  }
+  .side-divider {
+    margin-block: 19px 28px;
+  }
+  .sidebar-bottom-art {
+    height: min(65vh, 750px);
+  }
+  .sidebar-bottom-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sidebar-starter {
+    left: 23px;
+    right: 23px;
+    bottom: 35px;
+    height: 133px;
+    padding: 22px 14px;
+  }
+  .starter-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 30px;
+  }
+  .starter-text strong {
+    font-size: 15px;
+  }
+  .starter-text small {
+    font-size: 12px;
+  }
+  .starter-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 21px;
+  }
+  .sidebar-collapsed .sidebar-brand-row {
+    height: 104px;
+    padding-inline: 12px;
+  }
+  .sidebar-collapsed .sidebar-scroll {
+    height: calc(100vh - 104px);
+    padding: 18px 11px;
+  }
+  .sidebar-collapsed .side-link {
+    padding: 0;
+  }
+  .sidebar-collapsed .sidebar-starter {
+    display: none;
+  }
+
+  .topbar {
+    height: 96px;
+    padding-inline: clamp(70px, 4vw, 128px) clamp(44px, 3vw, 100px);
+  }
+  .top-search {
+    height: 62px;
+    width: clamp(650px, 26vw, 830px);
+    max-width: 44%;
+    gap: 19px;
+  }
+  .top-search span {
+    font-size: 16px;
+  }
+  .top-search kbd {
+    font-size: 15px;
+  }
+  .search-icon {
+    font-size: 27px;
+  }
+  .top-nav {
+    font-size: 16px;
+    gap: clamp(30px, 2vw, 60px);
+  }
+  .top-nav .login-button {
+    height: 53px;
+    padding-inline: 29px;
+  }
+  .github-link i {
+    font-size: 24px;
+  }
+
+  .page-content {
+    max-width: 2880px;
+    margin-inline: auto;
+    padding: 42px clamp(76px, 3.5vw, 125px) 80px;
+  }
+  .hero {
+    height: clamp(500px, 17vw, 585px);
+  }
+  .hero-copy {
+    width: min(860px, 42%);
+  }
+  .opensource-badge {
+    height: 46px;
+    padding-inline: 20px;
+    font-size: 16px;
+  }
+  .opensource-badge i {
+    font-size: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(87px, 3vw, 110px);
+    margin: 23px 0 27px;
+    letter-spacing: -3.3px;
+  }
+  .hero-copy > p {
+    width: min(740px, 100%);
+    font-size: clamp(19px, 0.7vw, 23px);
+    line-height: 1.6;
+  }
+  .hero-actions {
+    margin-top: 29px;
+    gap: 20px;
+  }
+  .glow-btn,
+  .outline-btn {
+    height: 59px;
+    font-size: 16px;
+    padding-inline: 24px;
+  }
+  .glow-btn i,
+  .outline-btn i {
+    font-size: 22px;
+  }
+  .hero-knight {
+    width: clamp(760px, 25vw, 970px);
+    right: clamp(470px, 16vw, 635px);
+    top: -109px;
+    height: auto;
+  }
+  .orbit-one {
+    right: clamp(390px, 16vw, 650px);
+    width: clamp(650px, 26vw, 920px);
+    height: clamp(500px, 20vw, 700px);
+  }
+  .orbit-two {
+    right: clamp(430px, 18vw, 710px);
+    width: clamp(600px, 23vw, 850px);
+    height: clamp(540px, 23vw, 780px);
+  }
+  .code-visual {
+    right: clamp(35px, 2vw, 70px);
+    top: 94px;
+    width: clamp(520px, 18vw, 670px);
+    height: clamp(285px, 10vw, 350px);
+  }
+  .code-window-titlebar {
+    height: 60px;
+  }
+  .code-window-titlebar > span {
+    font-size: 14px;
+  }
+  .code-window-body {
+    font-size: clamp(14px, 0.51vw, 18px);
+    line-height: 27px;
+    padding: 21px 24px;
+  }
+  .copy-code {
+    width: 50px;
+    height: 48px;
+    font-size: 23px;
+  }
+  .hero-rocks {
+    top: 325px;
+  }
+
+  .features {
+    gap: 25px;
+  }
+  .feature-tile {
+    height: 104px;
+    padding-inline: 29px;
+    gap: 22px;
+  }
+  .feature-icon {
+    width: 63px;
+    height: 58px;
+    font-size: 39px;
+  }
+  .feature-tile strong {
+    font-size: 18px;
+  }
+  .feature-tile p {
+    font-size: 16px;
+  }
+  .components-section {
+    margin-top: 34px;
+    padding-top: 23px;
+  }
+  .section-heading h2 {
+    font-size: 43px;
+  }
+  .section-heading p {
+    font-size: 17px;
+  }
+  .all-components {
+    font-size: 17px;
+  }
+  .category-grid {
+    gap: 24px;
+    margin-top: 27px;
+  }
+  .category-card {
+    height: 319px;
+  }
+  .category-preview {
+    height: 194px;
+  }
+  .category-card-text {
+    padding: 13px 25px 22px;
+  }
+  .category-card h3 {
+    font-size: 25px;
+  }
+  .category-card p {
+    font-size: 16px;
+  }
+  .card-arrow {
+    width: 43px;
+    height: 43px;
+    font-size: 22px;
+  }
+  .demo-glow-button {
+    width: 209px;
+    height: 59px;
+    font-size: 18px;
+  }
+  .demo-glow-button i {
+    font-size: 25px;
+  }
+  .demo-preview-card {
+    width: 224px;
+    height: 115px;
+    padding: 15px;
+  }
+  .demo-image {
+    width: 94px;
+    height: 79px;
+  }
+  .demo-form {
+    width: 228px;
+    height: 126px;
+    padding: 15px;
+    gap: 8px;
+  }
+  .demo-field {
+    height: 27px;
+    font-size: 11px;
+  }
+  .demo-submit {
+    height: 25px;
+  }
+  .demo-nav {
+    width: 270px;
+    height: 60px;
+    font-size: 25px;
+  }
+  .demo-nav .selected {
+    width: 81px;
+    height: 50px;
+  }
+}
