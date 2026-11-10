@@ -48,7 +48,7 @@ export default function Topbar({ onOpenMobile }: Props) {
         <nav className="top-nav" aria-label="Extra navigatie">
           <Link to="/docs">Docs</Link>
           <Link to="/changelog" className="changelog-link">Changelog<span className="new-dot" /></Link>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="github-link"><Icon name="ri-github-fill" /> GitHub</a>
+          <a href="https://github.com/itzmitto/DEVUI" target="_blank" rel="noreferrer" className="github-link"><Icon name="ri-github-fill" /> GitHub</a>
           <Link to="/login" className="login-button">Inloggen</Link>
         </nav>
       </header>
