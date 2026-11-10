@@ -1,19 +1,8 @@
-<p align="center">
-  <img src="public/images/devui-banner.svg" alt="DevUI Code Library — Kleine componenten. Grote ideeën." width="100%" />
-</p>
-
 <h1 align="center">DevUI Code Library</h1>
 
 <p align="center">
   Een groeiende collectie React-componenten om te ontdekken, te kopiëren en zelf verder te bouwen.<br />
   Van glowing buttons tot dashboard-cards — gemaakt als creatief frontend-oefenproject.
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/React_19-15121E?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
-  <img src="https://img.shields.io/badge/TypeScript-15121E?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS_4-15121E?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8" alt="Tailwind CSS 4" />
-  <img src="https://img.shields.io/badge/Vite_7-15121E?style=for-the-badge&logo=vite&logoColor=C4A2FF" alt="Vite 7" />
 </p>
 
 <p align="center">
