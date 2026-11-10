@@ -8,7 +8,7 @@ export const buttonMeta = {
   tags: ['Eigen ontwerp'],
 }
 
-export default function Buttons3() {
+export default function Buttons3() {    
   return (
     // TODO: vervang deze lege voorbeeldbutton door je eigen JSX / Tailwind CSS.
     <button type="button" className="btnlib-empty-button" disabled>
