@@ -9,9 +9,10 @@ type Props = {
   globalMode: GalleryMode
   copied: boolean
   onCopy: (source: string, id: string) => void
+  onExpand?: (item: ButtonEntry) => void
 }
 
-export default function ButtonGalleryCard({ item, globalMode, copied, onCopy }: Props) {
+export default function ButtonGalleryCard({ item, globalMode, copied, onCopy, onExpand }: Props) {
   const [mode, setMode] = useState<GalleryMode>(globalMode)
   const Preview = item.Preview
 
@@ -23,6 +24,17 @@ export default function ButtonGalleryCard({ item, globalMode, copied, onCopy }: 
         <span className="btnlib-number">#{String(item.number).padStart(3, '0')}</span>
         <span className="btnlib-category-badge">{item.category}</span>
         <span className="btnlib-file-name">{item.fileName}</span>
+        {onExpand && (
+          <button
+            type="button"
+            className="btnlib-expand"
+            onClick={() => onExpand(item)}
+            aria-label={`Open ${item.title} in groot voorbeeldvenster`}
+            title="Vergroot preview"
+          >
+            <Icon name="ri-fullscreen-line" />
+          </button>
+        )}
       </div>
 
       <div className={`btnlib-stage ${mode === 'code' ? 'btnlib-stage-code' : ''}`}>

@@ -3,6 +3,8 @@ import type { ComponentType } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/ui/Icon'
 import ButtonGalleryCard from '../components/buttons/ButtonGalleryCard'
+import CardPreviewModal from '../components/cards/CardPreviewModal'
+import type { ButtonEntry } from '../components/buttons/buttonCatalog'
 import './buttons.css'
 import './cards.css'
 
@@ -50,6 +52,7 @@ export default function CardsPage() {
   const [mode, setMode] = useState<Mode>('preview')
   const [copiedId, setCopiedId] = useState<string | null>(null)
   const [error, setError] = useState(false)
+  const [expandedCard, setExpandedCard] = useState<ButtonEntry | null>(null)
 
   async function copyCode(source: string, id: string) {
     try {
@@ -109,7 +112,7 @@ export default function CardsPage() {
         </div>
 
         <div className="btnlib-preview-toolbar">
-          <span><Icon name="ri-layout-grid-line" /> Alle cards, zonder zoekbalk of filters.</span>
+          <span><Icon name="ri-layout-grid-line" /> Klik op het vergroot-icoon om de volledige card te bekijken.</span>
           <div className="btnlib-view-controls" role="group" aria-label="Weergave">
             <button type="button" className={mode === 'preview' ? 'active' : ''}
               onClick={() => setMode('preview')} aria-pressed={mode === 'preview'}>
@@ -130,6 +133,7 @@ export default function CardsPage() {
               globalMode={mode}
               copied={copiedId === card.id}
               onCopy={copyCode}
+              onExpand={setExpandedCard}
             />
           ))}
         </div>
@@ -150,6 +154,13 @@ export default function CardsPage() {
           </div>
         </div>
       </section>
+      {expandedCard && (
+        <CardPreviewModal
+          item={expandedCard}
+          onClose={() => setExpandedCard(null)}
+        />
+      )}
+
       <p className="btnlib-announce" role="status" aria-live="polite">
         {error ? 'Kopiëren mislukt: controleer klembordrechten.' : copiedId ? 'Code gekopieerd.' : ''}
       </p>
