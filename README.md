@@ -47,7 +47,6 @@ Alle iconen: https://remixicon.com
 
 De pagina's behalve Home zijn opzettelijk eenvoudige placeholders, zodat je ze zelf kunt bouwen. De heroillustratie is een nieuwe, vergelijkbare afbeelding en geen identieke kopie van het bronpersonage. De CDN-iconen en Google Fonts laden via internet.
 
-
 ## Aanpassing van de homepage (10 november 2026)
 
 - `public/images/knight-cutout.png` is de nieuwe ridderillustratie, uit de referentie losgemaakt met zachte transparante randen. Geen zichtbare screenshot-rechthoek en geen meegekopieerde navigatie.
