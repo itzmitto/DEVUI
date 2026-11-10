@@ -2,11 +2,11 @@
 // Zelfstandig bestand: geen extra CSS of iconenbibliotheek nodig.
 
 export const buttonMeta = {
-  title: 'Button 15 — Pro plan',
-  category: 'Glass / Skeuomorphic',
-  description: 'Warme bronzen glazen kaart met een gouden lichtrand.',
-  tags: ['Glass', 'Brons', 'Card'],
-}
+  title: "Button 15 — Pro plan",
+  category: "Glass / Skeuomorphic",
+  description: "Warme bronzen glazen kaart met een gouden lichtrand.",
+  tags: ["Glass", "Brons", "Card"],
+};
 
 export default function Buttons15() {
   return (
@@ -153,9 +153,22 @@ export default function Buttons15() {
 .devui-button-15 .glass-count { font-size: 16px; }
 .devui-button-15 .glass-glint { top: 2px; right: 10px; width: 165px; height: 7px; border-radius: 100%; transform: rotate(1deg); background: linear-gradient(90deg,transparent,#ffe1d5 85%,transparent); }
 .devui-button-15 .glass-bottom { left: 22px; right: 22px; bottom: 7px; border-color: #ffe0a8; }`}</style>
-      <button type="button" className="devui-button-15" aria-label="Pro plan, Focus ring, hover states, Disabled states, 3"><span className="glass-glint" aria-hidden="true" />
+      <button
+        type="button"
+        className="devui-button-15"
+        aria-label="Pro plan, Focus ring, hover states, Disabled states, 3"
+      >
+        <span className="glass-glint" aria-hidden="true" />
         <span className="glass-bottom" aria-hidden="true" />
-        <span className="glass-face"><span className="glass-label">Pro plan</span><span className="glass-description">Focus ring, hover states,</span><span className="glass-footer"><span>Disabled states</span><span className="glass-count">3</span></span></span></button>
+        <span className="glass-face">
+          <span className="glass-label">Pro plan</span>
+          <span className="glass-description">Focus ring, hover states,</span>
+          <span className="glass-footer">
+            <span>Disabled states</span>
+            <span className="glass-count">3</span>
+          </span>
+        </span>
+      </button>
     </>
-  )
+  );
 }

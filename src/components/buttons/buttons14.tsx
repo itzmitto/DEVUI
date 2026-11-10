@@ -2,11 +2,12 @@
 // Zelfstandig bestand: geen extra CSS of iconenbibliotheek nodig.
 
 export const buttonMeta = {
-  title: 'Button 14 — Tabs',
-  category: 'Glass / Skeuomorphic',
-  description: 'Donker glazen menukaart met blauwe reflectie, terugknop en twee acties.',
-  tags: ['Glass', 'Menu', 'Blauw'],
-}
+  title: "Button 14 — Tabs",
+  category: "Glass / Skeuomorphic",
+  description:
+    "Donker glazen menukaart met blauwe reflectie, terugknop en twee acties.",
+  tags: ["Glass", "Menu", "Blauw"],
+};
 
 export default function Buttons14() {
   return (
@@ -155,9 +156,32 @@ export default function Buttons14() {
 .devui-button-14 .glass-bottom { bottom: 8px; left: 24px; right: 19px; height: 4px; opacity: .3; }
 .devui-button-14::after { opacity: .1; }
 .devui-button-14:active { transform: none; }`}</style>
-      <div className="devui-button-14" role="group" aria-label="Tabs menu"><span className="glass-glint" aria-hidden="true" />
+      <div className="devui-button-14" role="group" aria-label="Tabs menu">
+        <span className="glass-glint" aria-hidden="true" />
         <span className="glass-bottom" aria-hidden="true" />
-        <span className="glass-face"><button type="button"><svg width="18" height="22" viewBox="0 0 18 22" fill="none" aria-hidden="true"><path d="m11 4-7 7 7 7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg><span>Tabs</span></button><button type="button">Find files...</button><button type="button">Add collaborator</button></span></div>
+        <span className="glass-face">
+          <button type="button">
+            <svg
+              width="18"
+              height="22"
+              viewBox="0 0 18 22"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="m11 4-7 7 7 7"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>Tabs</span>
+          </button>
+          <button type="button">Find files...</button>
+          <button type="button">Add collaborator</button>
+        </span>
+      </div>
     </>
-  )
+  );
 }
