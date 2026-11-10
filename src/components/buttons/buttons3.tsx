@@ -1,19 +1,33 @@
 // DevUI button 03 - jouw eigen button
 // Alleen dit bestand aanpassen. De Buttons-pagina ontdekt je code automatisch.
 
+
 export const buttonMeta = {
-  title: 'Button 03',
-  category: 'Nog invullen',
-  description: 'Lege plek. Open buttons3.tsx en bouw hier jouw eigen button.',
-  tags: ['Eigen ontwerp'],
+  title: 'Pink Orange Gradient',
+  category: 'Gradient',
+  description: 'Roze-oranje gradient button met 10px border radius.',
+  tags: ['Gradient', 'Pink', 'Orange'],
 }
 
-export default function Buttons3() {    
+export default function Buttons3() {
   return (
-    // TODO: vervang deze lege voorbeeldbutton door je eigen JSX / Tailwind CSS.
-    <button type="button" className="btnlib-empty-button" disabled>
-      <span aria-hidden="true">+</span>
-      <span>Button 03</span>
+    <button
+      type="button"
+      className="
+        rounded-[10px]
+        bg-[linear-gradient(135deg,#FF2D87,#FF891F)]
+        px-8
+        py-3
+        font-semibold
+        text-[#110B16]
+        transition-transform
+        duration-200
+        hover:scale-105
+        active:scale-95
+        cursor-pointer
+      "
+    >
+      Button 03
     </button>
   )
 }
