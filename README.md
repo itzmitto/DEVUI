@@ -1,6 +1,6 @@
 # DevUI Code Library
 
-React + TypeScript + Tailwind CSS v4 + Vite. De homepage is gebaseerd op de meegegeven screenshot, met een ridderasset die is aangepast op basis van de referentiescreenshot en bijpassende transparante rotsillustraties.
+React + TypeScript + Tailwind CSS v4 + Vite. De homepage is gebaseerd op de meegegeven screenshot, met zelf gegenereerde transparante ridder- en rotsillustraties.
 
 ## Starten
 
@@ -30,7 +30,7 @@ npm run build
 - `src/components/home/` bevat de hero, de code-preview, feature-strip en kaarten.
 - `src/data/navigation.ts` bevat alle menu-links en routes voor zoeken.
 - `src/styles.css` bevat Tailwind-import én de pixelgerichte stijlen.
-- `public/images/knight-reference.png` is de ridderafbeelding die op de homepage wordt gebruikt; `knight.png` is de eerdere ridderillustratie. `purple-cliffs.png` en `rock-accent.png` zijn de rotsillustraties.
+- `public/images/knight.png` en `purple-cliffs.png` zijn transparante, gegenereerde assets.
 - `public/downloads/devui-starter-pack.zip` is de demo-download voor de starterpackknop.
 
 ## Iconen
@@ -45,4 +45,14 @@ Alle iconen: https://remixicon.com
 
 ## Belangrijk
 
-De pagina's behalve Home zijn opzettelijk eenvoudige placeholders, zodat je ze zelf kunt bouwen. De hero gebruikt een vrijgemaakte uitsnede van de meegeleverde referentiescreenshot. De overige details kunnen door browser, lettertypes en schermformaat licht afwijken. De CDN-iconen en Google Fonts laden via internet.
+De pagina's behalve Home zijn opzettelijk eenvoudige placeholders, zodat je ze zelf kunt bouwen. De heroillustratie is een nieuwe, vergelijkbare afbeelding en geen identieke kopie van het bronpersonage. De CDN-iconen en Google Fonts laden via internet.
+
+
+## Aanpassing van de homepage (10 november 2026)
+
+- `public/images/knight-cutout.png` is de nieuwe ridderillustratie, uit de referentie losgemaakt met zachte transparante randen. Geen zichtbare screenshot-rechthoek en geen meegekopieerde navigatie.
+- `src/components/home/Hero.tsx` gebruikt deze afbeelding direct.
+- De bergdecoratie in de sidebar en de Starter Pack-kaart zijn opnieuw gepositioneerd.
+- Op brede schermen heeft de content een maximale breedte van 1440px voor evenwichtige verhoudingen.
+
+**Belangrijk bij screenshots vergelijken:** de aangeleverde doelafbeelding is 1672 × 941 pixels. Een opname van 1852 × 1180 pixels toont door de andere resolutie en eventuele browserzoom een andere hoeveelheid lege ruimte. Vergelijk bij voorkeur beide op 100% zoom en hetzelfde browserformaat.

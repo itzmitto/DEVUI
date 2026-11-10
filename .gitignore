@@ -6,8 +6,3 @@ dist/
 .DS_Store
 .idea/
 .vscode/
-
-node_modules/
-dist/
-.env
-.env.local

@@ -1,24 +1,24 @@
-import { Route, Routes } from "react-router-dom";
-import AppShell from "./components/layout/AppShell";
-import Home from "./pages/Home";
-import Buttons from "./pages/buttons";
-import Cards from "./pages/cards";
-import Formulieren from "./pages/formulieren";
-import Navigatie from "./pages/navigatie";
-import Layouts from "./pages/layouts";
-import Modals from "./pages/modals";
-import Tabs from "./pages/tabs";
-import UiElements from "./pages/ui-elements";
-import Overig from "./pages/overig";
-import Componenten from "./pages/componenten";
-import StarterPacks from "./pages/starter-packs";
-import Templates from "./pages/templates";
-import Snippets from "./pages/snippets";
-import Tools from "./pages/tools";
-import Docs from "./pages/docs";
-import Changelog from "./pages/changelog";
-import Login from "./pages/login";
-import NotFound from "./pages/not-found";
+import { Route, Routes } from 'react-router-dom'
+import AppShell from './components/layout/AppShell'
+import Home from './pages/Home'
+import Buttons from './pages/buttons'
+import Cards from './pages/cards'
+import Formulieren from './pages/formulieren'
+import Navigatie from './pages/navigatie'
+import Layouts from './pages/layouts'
+import Modals from './pages/modals'
+import Tabs from './pages/tabs'
+import UiElements from './pages/ui-elements'
+import Overig from './pages/overig'
+import Componenten from './pages/componenten'
+import StarterPacks from './pages/starter-packs'
+import Templates from './pages/templates'
+import Snippets from './pages/snippets'
+import Tools from './pages/tools'
+import Docs from './pages/docs'
+import Changelog from './pages/changelog'
+import Login from './pages/login'
+import NotFound from './pages/not-found'
 
 export default function App() {
   return (
@@ -45,5 +45,5 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
-  );
+  )
 }
