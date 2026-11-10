@@ -18,11 +18,18 @@
 }
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: clip;
 }
 body {
   margin: 0;
   min-width: 320px;
+  max-width: 100%;
   background: #090a0d;
+}
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
 button,
 input {
@@ -48,6 +55,7 @@ input:focus-visible {
 
 /* --- Website shell --- */
 .app-shell {
+  width: 100%;
   min-height: 100vh;
   background: #090a0d;
 }
@@ -613,17 +621,20 @@ input:focus-visible {
 .page-content {
   position: relative;
   z-index: 10;
-  padding: 30px 55px 60px 66px;
+  width: 100%;
+  min-width: 0;
+  padding: 30px clamp(24px, 3.4vw, 80px) 60px clamp(24px, 4vw, 84px);
 }
 .home-page {
-  max-width: 1440px;
-  margin-left: 0;
-  margin-right: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 .hero {
   position: relative;
   height: 372px;
   isolation: isolate;
+  min-width: 0;
 }
 .hero-copy {
   position: relative;
@@ -658,7 +669,7 @@ input:focus-visible {
 }
 .hero h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(48px, 4.15vw, 67px);
+  font-size: clamp(44px, 4.15vw, 67px);
   font-weight: 700;
   line-height: 0.94;
   letter-spacing: -2.7px;
@@ -1089,6 +1100,7 @@ input:focus-visible {
 }
 .category-preview {
   height: 129px;
+  min-width: 0;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -1216,6 +1228,7 @@ input:focus-visible {
 }
 .demo-nav {
   width: 210px;
+  max-width: calc(100% - 12px);
   height: 47px;
   padding: 4px;
   display: flex;
@@ -1487,7 +1500,7 @@ input:focus-visible {
     grid-template-columns: 1fr 1fr;
   }
   .feature-tile:last-child {
-    display: none;
+    grid-column: 1 / -1;
   }
   .category-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1498,6 +1511,109 @@ input:focus-visible {
   }
   .top-search {
     max-width: 100%;
+  }
+}
+/* Tablet layouts get the same off-canvas navigation as phones. */
+@media (min-width: 761px) and (max-width: 1120px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+  .is-collapsed {
+    --sidebar-width: 0px;
+  }
+  .main-area,
+  .is-collapsed .main-area {
+    margin-left: 0;
+  }
+  .main-area::before {
+    inset: 0;
+  }
+  .sidebar {
+    width: 254px;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+  }
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+  .mobile-shade {
+    position: fixed;
+    z-index: 35;
+    inset: 0;
+    border: 0;
+    background: #000b;
+  }
+  .sidebar-collapsed {
+    width: 254px;
+  }
+  .mobile-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .topbar {
+    padding: 0 28px;
+    gap: 15px;
+  }
+  .top-nav .changelog-link,
+  .top-nav .github-link {
+    display: none;
+  }
+  .top-search {
+    width: auto;
+    flex: 1;
+    max-width: none;
+  }
+  .page-content {
+    padding: 30px 28px 54px;
+  }
+  .hero {
+    height: 345px;
+  }
+  .hero-copy {
+    width: 65%;
+  }
+  .hero h1 {
+    font-size: clamp(43px, 5.8vw, 56px);
+  }
+  .hero-knight {
+    right: 20px;
+    top: -30px;
+    width: 415px;
+    opacity: 0.48;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .features .feature-tile:last-child {
+    display: flex;
+    grid-column: 1 / -1;
+  }
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-violet-haze {
+    right: 0;
+  }
+}
+/* At this width four tiny cards stop being useful. */
+@media (min-width: 1121px) and (max-width: 1180px) {
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .features .feature-tile:last-child {
+    display: flex;
+    grid-column: 1 / -1;
+  }
+  .hero-violet-haze {
+    right: 0;
   }
 }
 @media (max-width: 760px) {
@@ -1568,6 +1684,12 @@ input:focus-visible {
     height: auto;
     min-height: 420px;
     overflow: hidden;
+  }
+  .hero-copy {
+    max-width: 100%;
+  }
+  .hero-violet-haze {
+    right: 0;
   }
   .hero-copy {
     width: 100%;
@@ -1642,7 +1764,7 @@ input:focus-visible {
     min-height: 440px;
   }
   .hero h1 {
-    font-size: 42px;
+    font-size: clamp(35px, 10vw, 42px);
     letter-spacing: -1.8px;
   }
   .hero-copy > p {
@@ -1752,5 +1874,112 @@ input:focus-visible {
   }
   .hero::after {
     display: none;
+  }
+}
+
+/* Wide desktop: use the full content area instead of leaving an empty right side.
+   Breakpoints above 1800px leave the 1672px reference design untouched. */
+@media (min-width: 1801px) {
+  .page-content {
+    padding-left: clamp(72px, 4.3vw, 110px);
+    padding-right: clamp(60px, 4vw, 106px);
+  }
+  .topbar {
+    padding-left: clamp(72px, 4.3vw, 110px);
+    padding-right: clamp(32px, 3vw, 80px);
+  }
+  .top-search {
+    width: clamp(555px, 31vw, 690px);
+    max-width: 45vw;
+  }
+  .hero {
+    height: clamp(389px, 21vw, 460px);
+  }
+  .hero-copy {
+    width: min(660px, 45%);
+  }
+  .hero h1 {
+    font-size: clamp(67px, 3.65vw, 87px);
+  }
+  .hero-copy > p {
+    font-size: clamp(15.6px, 0.86vw, 19px);
+    width: min(620px, 100%);
+  }
+  .hero-knight {
+    width: clamp(510px, 28.5vw, 780px);
+    height: auto;
+    right: clamp(356px, 23vw, 780px);
+    top: -87px;
+  }
+  .orbit-one {
+    right: clamp(266px, 19vw, 740px);
+    width: clamp(560px, 31vw, 820px);
+    height: clamp(461px, 26vw, 650px);
+  }
+  .orbit-two {
+    right: clamp(292px, 20vw, 740px);
+  }
+  .code-visual {
+    right: clamp(12px, 1vw, 42px);
+    top: clamp(62px, 4vw, 112px);
+    width: clamp(375px, 21vw, 540px);
+    height: clamp(223px, 12.5vw, 290px);
+  }
+  .category-card {
+    height: clamp(223px, 12.2vw, 284px);
+  }
+  .category-preview {
+    height: clamp(129px, 7.8vw, 175px);
+  }
+  .category-card h3 {
+    font-size: clamp(20px, 1.17vw, 25px);
+  }
+  .category-card p {
+    font-size: clamp(12.7px, 0.76vw, 16px);
+  }
+  .feature-tile {
+    height: clamp(80px, 4.75vw, 100px);
+  }
+  .feature-tile strong {
+    font-size: clamp(13.8px, 0.85vw, 18px);
+  }
+  .feature-tile p {
+    font-size: clamp(12.7px, 0.75vw, 16px);
+  }
+}
+@media (min-width: 2600px) {
+  .hero {
+    height: 500px;
+  }
+  .hero-copy {
+    width: min(810px, 40%);
+  }
+  .hero h1 {
+    font-size: clamp(87px, 3vw, 110px);
+  }
+  .hero-copy > p {
+    font-size: clamp(19px, 0.78vw, 23px);
+  }
+  .hero-knight {
+    width: clamp(780px, 25vw, 990px);
+    right: clamp(780px, 25vw, 1080px);
+    top: -100px;
+  }
+  .code-visual {
+    width: clamp(540px, 17vw, 660px);
+    height: 300px;
+    top: 108px;
+  }
+  .category-card {
+    height: 290px;
+  }
+  .category-preview {
+    height: 180px;
+  }
+  .features {
+    gap: 28px;
+  }
+  .category-grid {
+    gap: 26px;
   }
 }
